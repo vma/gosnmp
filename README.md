@@ -1,8 +1,12 @@
-gosnmp
-======
-[![Build Status](https://travis-ci.org/soniah/gosnmp.svg?branch=master)](https://travis-ci.org/soniah/gosnmp)
-[![GoDoc](https://godoc.org/github.com/soniah/gosnmp?status.png)](http://godoc.org/github.com/soniah/gosnmp)
-https://github.com/soniah/gosnmp
+vma/gosnmp
+==========
+
+This fork adds context wrappers to soniah/gosnmp public api.
+
+[![GoDoc](https://godoc.org/github.com/vma/gosnmp?status.png)](http://godoc.org/github.com/vma/gosnmp)
+
+soniah/gosnmp
+=============
 
 GoSNMP is an SNMP client library fully written in Go. It provides Get,
 GetNext, GetBulk, Walk, BulkWalk, Set and Traps. It supports IPv4 and

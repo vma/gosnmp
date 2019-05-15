@@ -7,8 +7,9 @@
 package gosnmp
 
 import (
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 // https://www.scadacore.com/tools/programming-calculators/online-hex-converter/ is useful
@@ -111,4 +112,27 @@ func TestParseUint64(t *testing.T) {
 			t.Errorf("parseUint64(%v) = %d, %v want %d, <nil>", test.data, ret, err, test.n)
 		}
 	}
+}
+
+func checkByteEquality2(a, b []byte) bool {
+
+	if a == nil && b == nil {
+		return true
+	}
+
+	if a == nil || b == nil {
+		return false
+	}
+
+	if len(a) != len(b) {
+		return false
+	}
+
+	for i := range a {
+		if a[i] != b[i] {
+			return false
+		}
+	}
+
+	return true
 }
